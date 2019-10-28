@@ -5,7 +5,7 @@ if(!process.env.NODE_ENV){
 const express = require('express');
 const ConfigMiddleware = require('./middleware');
 const Routes = require("./routes");
-
+const DataService = require("./dataService.js");
 // Server starting point
 class Main {
 
@@ -13,9 +13,11 @@ class Main {
     const app = express();
     const configMiddleware = new ConfigMiddleware(app);
     const routes = new Routes();
-
+    const dataService = new DataService();
+    dataService.init()
+    const dbInstance = dataService.db;
     this.preMiddlewareConfig(configMiddleware);
-    this.routesConfig(app, routes);
+    this.routesConfig(app, routes, dbInstance);
     this.postMiddlewareConfig(configMiddleware);
     this.startServer(app);
   }
@@ -26,8 +28,8 @@ class Main {
   }
 
   // Init routes
-  routesConfig(app, routes) {
-    routes.init(app);
+  routesConfig(app, routes, db) {
+    routes.init(app, db);
   }
 
   // Init post middleware

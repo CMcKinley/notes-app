@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from "react";
+import React, { memo } from "react";
 import NotePad from "./NotePad";
 import NotesList from "./List";
 
