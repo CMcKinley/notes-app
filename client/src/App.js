@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
+import { Switch, Route } from "react-router";
+import NotesContainer from "./Views/NotesContainer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        'Hello World'
-      </header>
-    </div>
+    <main>
+      <Switch>
+        <Route path="/" component={NotesContainer} />
+      </Switch>
+    </main>
   );
 }
 
