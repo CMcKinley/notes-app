@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [],
+  "author": "Caleb McKinley",
+  "license": "MIT",
+  "files": [
+    "build"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "express": "4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "dotenv": "8.2.0",
+    "nodemon": "1.19.4"
+  }
+}
