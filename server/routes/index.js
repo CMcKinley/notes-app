@@ -1,5 +1,5 @@
-const NoteRoutes = require("./note.routes.js");
-const StaticRoutes = require("./static.routes.js");
+const NoteRoutes = require("./note.routes");
+const StaticRoutes = require("./static.routes");
 
 class Routes {
   init(app) {

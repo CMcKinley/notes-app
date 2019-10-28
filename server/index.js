@@ -10,7 +10,6 @@ const Routes = require("./routes");
 class Main {
 
   init() {
-    console.log(process.env)
     const app = express();
     const configMiddleware = new ConfigMiddleware(app);
     const routes = new Routes();
