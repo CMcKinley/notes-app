@@ -10,8 +10,8 @@ const prefix = "NOTES/";
 
 // Action Creators
 export const setNotes = createAction(`${prefix}SET_NOTES`);
-export const editNote = createAction(`${prefix}EDIT_NOTE`);
-export const addNote = createAction(`${prefix}ADD_NOTE`);
+export const editNoteInStore = createAction(`${prefix}EDIT_NOTE`);
+export const addNoteToStore = createAction(`${prefix}ADD_NOTE`);
 
 // Reducer
 export default handleActions(
@@ -32,7 +32,7 @@ export default handleActions(
     },
 
     // Edit an existing note
-    [editNote]: (state, { payload }) => {
+    [editNoteInStore]: (state, { payload }) => {
       const { id } = payload || {};
       // The values of the note map are objects so we need to clone deep the noteMap to ensure each object's properties are not references to the original
       const newMap = cloneDeep(state.noteMap);
@@ -41,7 +41,7 @@ export default handleActions(
     },
 
     // Add a new note to the id array and note map
-    [addNote]: (state, { payload }) => {
+    [addNoteToStore]: (state, { payload }) => {
       const { id } = payload || {};
       const noteIds = [...state.noteIds];
       // The values of the note map are objects so we need to clone deep the noteMap to ensure each object's properties are not references to the original

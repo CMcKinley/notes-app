@@ -1,15 +1,16 @@
-import { axios } from "axios";
+import axios from "axios";
 
+// Store tools will be used to make http calls to the node api
 export default class StoreTools {
-  base(url, body, method = "get", headers = {}) {
-    const config = { url: `api/v1/${url}`, method, headers };
+ async base(url, body, method = "get", headers = {}) {
+    let config = { url: `/api/v1/${url}`, method, headers };
     if (body) {
       config.body = body;
     }
     return axios(config);
   }
 
-  get(url, headers = {}) {
+  async get(url, headers = {}) {
     return this.base(url, null, "get", headers);
   }
 
