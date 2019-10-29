@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import moment from "moment";
@@ -73,6 +74,14 @@ const Note = ({ noteId }) => {
       </div>
     </li>
   );
+};
+
+Note.propTypes = {
+  noteId: PropTypes.string
+};
+
+Note.defaultProps = {
+  noteId: ""
 };
 
 export default memo(Note);
