@@ -17,10 +17,10 @@ const useAddNotes = () => {
 
       // POST note to DB
       const { data } = await storeTools.post(`notes`, newNote);
-      const { id } = data || {};
+      const note = data || {};
 
       // Add new note to redux store
-      dispatch(addNoteToStore({...newNote, id}));
+      dispatch(addNoteToStore({...note}));
 
     } catch (err) {
       toast.error("Failed to add note.");

@@ -4,7 +4,7 @@ class NoteRoutes {
   constructor () {
     this.noteService = new NoteService();
   }
-  
+
   init(app, baseRoute, db) {
     this.configureRoutes(app, baseRoute, db);
   }
@@ -34,6 +34,7 @@ class NoteRoutes {
 
     app.post(`${baseRoute}notes`, (req, res, next) => {
       const { body } = req;
+      console.log(body)
       try {
         const response = this.noteService.post(body, db);
         res.json(response);

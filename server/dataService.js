@@ -9,12 +9,15 @@ class DataService {
   }
 
   init() {
-    const date = Date.now().toString();
-    this.db.defaults({
-      notes: [
-        { id: uuidv1(), text: "Initial Note", created: date, updated: null }
-      ]
-    }).write();
+    const date = new Date().toISOString();
+    this.db
+      .defaults({
+        notes: [
+          { id: uuidv1(), text: "Initial Note", created: date, updated: null },
+          { id: uuidv1(), text: "Newer Note", created: date, updated: null }
+        ]
+      })
+      .write();
   }
 }
 

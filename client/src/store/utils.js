@@ -5,7 +5,7 @@ export default class StoreTools {
  async base(url, body, method = "get", headers = {}) {
     let config = { url: `/api/v1/${url}`, method, headers };
     if (body) {
-      config.body = body;
+      config.data = body;
     }
     return axios(config);
   }

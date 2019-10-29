@@ -2,7 +2,7 @@ import { useState } from "react";
 import StoreTools from "../utils";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
-import { editNoteInStore } from "../notes";
+import { editNoteInStore, setNoteToEdit } from "../notes";
 
 const storeTools = new StoreTools();
 
@@ -23,6 +23,8 @@ const useEditNotes = () => {
 
       // update the note in the redux store
       dispatch(editNoteInStore({ ...editedNote, id }));
+      // remove the id from the edit property
+      dispatch(setNoteToEdit(null));
     } catch (err) {
       toast.error("Failed to edit note.");
     }

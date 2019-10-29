@@ -6,16 +6,16 @@ class NoteService {
   }
 
   post(note, db) {
-    const date = Date.now().toString();
-    const newNote = { ...note, id: uuidv1, created: date, updated: null };
+    const date = new Date().toISOString();
+    const newNote = { ...note, id: uuidv1(), created: date, updated: null };
     db.get("notes")
-      .push({ ...note, id: uuidv1, created: date, updated: null })
+      .push(newNote)
       .write();
     return newNote;
   }
 
   put(id, note, db) {
-    const date = Date.now().toString();
+    const date = new Date().toISOString();
     const editedNote = { ...note, updated: date };
     db.get("notes")
       .find({ id })

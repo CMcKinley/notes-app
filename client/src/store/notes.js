@@ -3,7 +3,8 @@ import cloneDeep from "lodash.clonedeep";
 
 const defultState = {
   noteIds: [],
-  noteMap: {}
+  noteMap: {},
+  noteToEdit: null
 };
 
 const prefix = "NOTES/";
@@ -12,6 +13,7 @@ const prefix = "NOTES/";
 export const setNotes = createAction(`${prefix}SET_NOTES`);
 export const editNoteInStore = createAction(`${prefix}EDIT_NOTE`);
 export const addNoteToStore = createAction(`${prefix}ADD_NOTE`);
+export const setNoteToEdit = createAction(`${prefix}SET_NOTE_TO_EDIT`);
 
 // Reducer
 export default handleActions(
@@ -45,11 +47,14 @@ export default handleActions(
       const { id } = payload || {};
       const noteIds = [...state.noteIds];
       // The values of the note map are objects so we need to clone deep the noteMap to ensure each object's properties are not references to the original
-      const noteMap = cloneDeep(state.newMap);
+      const noteMap = cloneDeep(state.noteMap);
       noteIds.unshift(payload.id);
       noteMap[id] = payload;
       return { ...state, noteIds, noteMap };
-    }
+    },
+
+    // Set the note that is to be edited in store
+    [setNoteToEdit]: (state, { payload }) => ({ ...state, noteToEdit: payload })
   },
   defultState
 );

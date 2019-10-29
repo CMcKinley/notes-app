@@ -1,13 +1,13 @@
 import React, { memo } from "react";
-import NotePad from "./NotePad";
+import Footer from "./Footer";
 import NotesList from "./List";
 
 const NotesContainer = () => {
   return (
-    <div>
-      <NotePad />
+    <>
       <NotesList />
-    </div>
+      <Footer />
+    </>
   );
 };
 
