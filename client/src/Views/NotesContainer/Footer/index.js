@@ -29,16 +29,19 @@ const useStyles = makeStyles(() => ({
 const Footer = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  // Get the note Id that is to be edited from store
   const noteIdToBeEdited = useSelector(state => state.notes.noteToEdit);
 
+  // If noteIdToBeEdited changes open the notepad. If the notepad was already open and noteIdToBeEdited is null, undefined or '' then close the notepad
   useEffect(() => {
     if (noteIdToBeEdited) {
       setOpen(true);
     } else if (!noteIdToBeEdited && open) {
-      setOpen(true);
+      setOpen(false);
     }
   }, [noteIdToBeEdited]);
 
+  // Render footer. Will display action button or notepad depending on the 'open' value
   return (
     <div className={classes.appBar}>
       {open ? (

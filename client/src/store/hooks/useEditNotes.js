@@ -19,11 +19,11 @@ const useEditNotes = () => {
         `notes/${editedNote.id}`,
         editedNote
       );
-
       // update the note in the redux store
       dispatch(editNoteInStore({ ...data }));
-      // remove the id from the edit property
+      // remove the id from the note to be edited  property
       dispatch(setNoteToEdit(null));
+      toast.success("Note saved.");
     } catch (err) {
       toast.error("Failed to edit note.");
     }

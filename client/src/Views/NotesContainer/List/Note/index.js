@@ -41,10 +41,13 @@ const useStyles = makeStyles(() => ({
 const Note = ({ noteId }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
+
+  // Get note details from store by the noteId prop
   const { text, created, updated, id } = useSelector(
     state => state.notes.noteMap[noteId]
   );
 
+  // Render note list item
   return (
     <li className={classes.listItem}>
       <div className={classes.content}>

@@ -48,6 +48,7 @@ export default handleActions(
       const noteIds = [...state.noteIds];
       // The values of the note map are objects so we need to clone deep the noteMap to ensure each object's properties are not references to the original
       const noteMap = cloneDeep(state.noteMap);
+      // Add note to beginning of array
       noteIds.unshift(payload.id);
       noteMap[id] = payload;
       return { ...state, noteIds, noteMap };

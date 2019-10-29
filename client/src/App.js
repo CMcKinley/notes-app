@@ -20,6 +20,8 @@ const useStyles = makeStyles(() => ({
 
 const App = () => {
   const classes = useStyles();
+
+  // Render app
   return (
     <main className={classes.container}>
       <AppBar >

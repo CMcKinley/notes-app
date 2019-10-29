@@ -6,6 +6,7 @@ import { setNotes } from "../notes";
 
 const storeTools = new StoreTools();
 
+// The purpose of this hook is to get the list of notes from the db and store in redux
 const useGetNotes = () => {
   const dispatch = useDispatch();
   const [isLoading, setLoading] = useState(false);
@@ -17,7 +18,6 @@ const useGetNotes = () => {
       const { notes } = data || {};
       dispatch(setNotes(notes || []));
     } catch (err) {
-      console.log(err);
       toast.error("Failed to fetch notes.");
     }
     setLoading(false);
