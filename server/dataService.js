@@ -8,6 +8,7 @@ class DataService {
     this.db = low(adapter);
   }
 
+  // Initialize db with default values
   init() {
     const date = new Date().toISOString();
     this.db
