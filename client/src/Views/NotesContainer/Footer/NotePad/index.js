@@ -1,11 +1,10 @@
 import React, { memo, useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
-import Fab from "@material-ui/core/Fab";
-import ClearIcon from "@material-ui/icons/Clear";
-import SubmitIcon from "@material-ui/icons/Send";
 import { useAddNotes, useEditNotes } from "store/hooks";
 import { useSelector } from "react-redux";
+import ActionButtons from "./ActionButtons";
 
 const useStyles = makeStyles(() => ({
   errorText: {
@@ -23,13 +22,6 @@ const useStyles = makeStyles(() => ({
   textField: {
     background: "white",
     borderRadius: "6px"
-  },
-  fab: {
-    margin: "8px"
-  },
-  actionButtons: {
-    display: "flex",
-    flexDirection: "column"
   }
 }));
 
@@ -64,7 +56,10 @@ const NotePad = ({ setOpen, noteIdToBeEdited }) => {
     } else {
       await addNotes({ text });
     }
+    setOpen(false);
+  }
 
+  async function handleCancel() {
     setOpen(false);
   }
 
@@ -88,27 +83,23 @@ const NotePad = ({ setOpen, noteIdToBeEdited }) => {
           </div>
         )}
       </div>
-      <div className={classes.actionButtons}>
-        <Fab
-          size="small"
-          aria-label="add"
-          onClick={handleSubmit}
-          className={classes.fab}
-          disabled={nonprintable || !text || isLoading || editIsLoading}
-        >
-          <SubmitIcon />
-        </Fab>
-        <Fab
-          size="small"
-          aria-label="add"
-          onClick={() => setOpen(false)}
-          className={classes.fab}
-        >
-          <ClearIcon />
-        </Fab>
-      </div>
+      <ActionButtons
+        disableSubmit={nonprintable || !text || isLoading || editIsLoading}
+        handleSubmit={handleSubmit}
+        handleCancel={handleCancel}
+      />
     </>
   );
+};
+
+NotePad.propTypes = {
+  noteIdToBeEdited: PropTypes.string,
+  setOpen: PropTypes.func
+};
+
+NotePad.defaultProps = {
+  noteIdToBeEdited: "",
+  setOpen: function() {}
 };
 
 export default memo(NotePad);

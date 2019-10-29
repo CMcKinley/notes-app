@@ -2,7 +2,7 @@ const uuidv1 = require("uuid/v1");
 
 class NoteService {
   get(db) {
-    return db.get("notes").value();
+    return db.get("notes").orderBy('created', 'desc').value();
   }
 
   post(note, db) {

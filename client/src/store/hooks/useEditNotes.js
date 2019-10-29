@@ -19,10 +19,9 @@ const useEditNotes = () => {
         `notes/${editedNote.id}`,
         editedNote
       );
-      const { id } = data || {};
 
       // update the note in the redux store
-      dispatch(editNoteInStore({ ...editedNote, id }));
+      dispatch(editNoteInStore({ ...data }));
       // remove the id from the edit property
       dispatch(setNoteToEdit(null));
     } catch (err) {

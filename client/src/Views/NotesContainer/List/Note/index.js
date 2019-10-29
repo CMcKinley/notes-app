@@ -2,11 +2,11 @@ import React, { memo } from "react";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
-import moment from "moment";
 import IconButton from "@material-ui/core/IconButton";
 import EditIcon from "@material-ui/icons/Create";
 import { setNoteToEdit } from "store/notes.js";
 import { useDispatch } from "react-redux";
+import DateText from "./DateText";
 
 const useStyles = makeStyles(() => ({
   dateText: {
@@ -45,12 +45,6 @@ const Note = ({ noteId }) => {
     state => state.notes.noteMap[noteId]
   );
 
-  const formattedDate = moment(created).format("MMMM, DD, YYYY");
-  const formattedUpdateDate = updated
-    ? moment(updated).format("MMMM, DD, YYYY")
-    : null;
-  const today = moment(created).format("MMMM, DD, YYYY");
-
   return (
     <li className={classes.listItem}>
       <div className={classes.content}>
@@ -60,16 +54,9 @@ const Note = ({ noteId }) => {
         </IconButton>
       </div>
       <div className={`${classes.dateText} ${classes.bottom}`}>
-        <span>
-          {today === formattedDate ? "Today" : formattedDate} at{" "}
-          {moment(created).format("h:mma")}
-        </span>
+      <DateText  dateToDisplay={created} />
         {updated && (
-          <span>
-            Edited{" "}
-            {today === formattedUpdateDate ? "today" : formattedUpdateDate} at{" "}
-            {moment(created).format("h:mma")}
-          </span>
+          <DateText text="Edited" dateToDisplay={updated} />
         )}
       </div>
     </li>
