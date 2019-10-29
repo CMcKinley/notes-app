@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   list: {
-    margin: "16px 8%"
+    margin: "76px 8% 76px"
   }
 }));
 

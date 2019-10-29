@@ -10,14 +10,19 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles(() => ({
   header: {
     margin: "8px 16px"
+  },
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    height: "100%"
   }
 }));
 
 const App = () => {
   const classes = useStyles();
   return (
-    <main>
-      <AppBar position="static">
+    <main className={classes.container}>
+      <AppBar >
         <Typography variant="h6" className={classes.header}>
           Notes
         </Typography>

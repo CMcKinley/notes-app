@@ -20,6 +20,11 @@ const useStyles = makeStyles(() => ({
     width: "100%",
     margin: "8px 0 16px 0"
   },
+  content: {
+    display: "flex",
+    width: "100%",
+    justifyContent: "space-between"
+  },
   listItem: {
     padding: "8px 16px",
     display: "flex",
@@ -40,20 +45,31 @@ const Note = ({ noteId }) => {
   );
 
   const formattedDate = moment(created).format("MMMM, DD, YYYY");
+  const formattedUpdateDate = updated
+    ? moment(updated).format("MMMM, DD, YYYY")
+    : null;
   const today = moment(created).format("MMMM, DD, YYYY");
 
   return (
     <li className={classes.listItem}>
-      <div className={classes.dateText}>
-        {today === formattedDate ? "Today" : formattedDate}
+      <div className={classes.content}>
+        <div className={classes.note}>{text}</div>
         <IconButton onClick={() => dispatch(setNoteToEdit(id))}>
           <EditIcon fontSize="small" />
         </IconButton>
       </div>
-      <div className={classes.note}>{text}</div>
       <div className={`${classes.dateText} ${classes.bottom}`}>
-        <span>{moment(created).format("h:mma")}</span>
-        {updated && <span>Edited</span>}
+        <span>
+          {today === formattedDate ? "Today" : formattedDate} at{" "}
+          {moment(created).format("h:mma")}
+        </span>
+        {updated && (
+          <span>
+            Edited{" "}
+            {today === formattedUpdateDate ? "today" : formattedUpdateDate} at{" "}
+            {moment(created).format("h:mma")}
+          </span>
+        )}
       </div>
     </li>
   );
