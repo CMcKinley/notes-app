@@ -11,7 +11,7 @@ This is a single page frontend built using React/Redux and served from a Node/Ex
 
 ## Testing
 
-- cd into client and run npm test
+- cd into client and npm run test
 
 ## Features
 
