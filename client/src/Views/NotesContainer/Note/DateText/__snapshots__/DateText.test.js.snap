@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateText Renders correctly 1`] = `
+<span>
+  
+   
+  Today
+   at
+   
+  8:46pm
+</span>
+`;

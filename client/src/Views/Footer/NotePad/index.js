@@ -85,7 +85,7 @@ const NotePad = ({ setOpen, noteIdToBeEdited }) => {
         <TextField
           id="note"
           className={classes.textField}
-          label="New Note"
+          label={noteIdToBeEdited ? "Edit Note" : "New Note"}
           value={text}
           multiline
           fullWidth

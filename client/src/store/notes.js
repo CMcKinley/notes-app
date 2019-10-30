@@ -1,7 +1,7 @@
 import { handleActions, createAction } from "redux-actions";
 import cloneDeep from "lodash.clonedeep";
 
-const defultState = {
+export const defultState = {
   noteIds: [],
   noteMap: {},
   noteToEdit: null

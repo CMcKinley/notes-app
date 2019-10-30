@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<section>
+  <div
+    className="makeStyles-listContainer-1"
+  >
+    <ul
+      className="MuiList-root MuiList-padding"
+    />
+  </div>
+</section>
+`;

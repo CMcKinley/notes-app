@@ -4,14 +4,10 @@ import NotesContainer from "./Views/NotesContainer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Typography from "@material-ui/core/Typography";
 import Footer from "./Views/Footer";
+import Header from "./Views/Header";
 
 const useStyles = makeStyles(() => ({
-  header: {
-    margin: "8px 16px"
-  },
   container: {
     display: "flex",
     flexDirection: "column",
@@ -25,11 +21,7 @@ const App = () => {
   // Render app
   return (
     <main className={classes.container}>
-      <AppBar>
-        <Typography variant="h6" className={classes.header}>
-          Notes
-        </Typography>
-      </AppBar>
+      <Header />
       <Switch>
         <Route exact path="/" component={NotesContainer} />
         <Route exact path="/:noteId" component={NotesContainer} />

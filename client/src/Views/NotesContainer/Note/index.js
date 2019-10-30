@@ -49,7 +49,7 @@ const Note = ({ noteId, history }) => {
 
   // Get note details from store by the noteId prop
   const { text, created, updated, id } = useSelector(
-    state => state.notes.noteMap[noteId],
+    state => state.notes.noteMap[noteId] || {},
     shallowEqual
   );
 
