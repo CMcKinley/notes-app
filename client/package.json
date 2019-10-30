@@ -1,6 +1,15 @@
 {
-  "name": "client",
+  "name": "notes-app-client",
+  "description": "Note taking application",
   "version": "1.0.0",
+  "keywords": [
+    "notes",
+    "react",
+    "node",
+    "hooks",
+    "spa"
+  ],
+  "author": "Caleb McKinley",
   "private": true,
   "proxy": "http://localhost:3001/",
   "scripts": {

@@ -11,7 +11,14 @@
     "build": "cd client && npm run build",
     "start": "npm run build && cd server && npm run start"
   },
-  "keywords": [],
+  "keywords": [
+    "notes",
+    "react",
+    "node",
+    "hooks",
+    "spa"
+  ],
   "author": "Caleb McKinley",
+  "description": "Note taking application",
   "license": "MIT"
 }

@@ -25,9 +25,5 @@ This is a single page frontend built using React/Redux and served from a Node/Ex
 ## Tech Highlights
 
 - The frontend client is a SPA built in React with a Redux store. It is made up of functional components using hooks. Memoization techniques are used to prevent unnecessary renders. Custom hooks are used to make http requests and update the redux store instead of thunks.
-- The server is Node/Express data persists in a json file using lowDB.
-
-
-## License
-
-MIT © Caleb McKinley
+- Material-UI is used for quick and easy front end react components and all styling is done using material-ui's useStyles hook which uses JSS at its core.
+- The server is built in Node/Express and data persists in a json file using lowDB.
