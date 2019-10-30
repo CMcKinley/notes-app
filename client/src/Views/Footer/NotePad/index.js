@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
   },
   inputWrapper: {
     flex: 1,
-    maxWidth: "600px",
+    maxWidth: "1000px",
     background: "white",
     borderRadius: "6px",
     padding: "4px 16px 8px",

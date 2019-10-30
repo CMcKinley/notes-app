@@ -34,7 +34,7 @@ const NotesContainer = ({ match, history }) => {
 
   // Set displayed ids if the note id in the url is not found push back to full list and display message
   useEffect(() => {
-    if (noteId && noteIds.indexOf(noteId) > 0) {
+    if (noteId && noteIds.indexOf(noteId) >= 0) {
       setDisplayedIds([noteId]);
     } else if (noteId && noteIds.length > 0 && noteIds.indexOf(noteId) < 0) {
       toast.error(`Note: ${noteId} not found.`);
