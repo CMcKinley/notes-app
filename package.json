@@ -12,6 +12,6 @@
     "start": "npm run build && cd server && npm run start"
   },
   "keywords": [],
-  "author": "",
+  "author": "Caleb McKinley",
   "license": "MIT"
 }

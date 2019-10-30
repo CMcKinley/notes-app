@@ -1,58 +1,16 @@
 {
   "notes": [
     {
-      "id": "e0b28df0-f9d1-11e9-a223-d15d420c35dc",
-      "text": "Initial Note 2",
-      "created": "2019-10-28T22:25:42.479Z",
-      "updated": "2019-10-29T02:48:42.796Z"
-    },
-    {
-      "id": "e0b28df1-f9d1-11e9-a223-d15d420c35dc",
-      "text": "Newer Note fast again t",
-      "created": "2019-10-28T22:25:42.479Z",
-      "updated": "2019-10-29T23:15:11.588Z"
-    },
-    {
-      "text": "New update again",
-      "id": "95abffb0-fa91-11e9-acb7-312f0d750b1b",
-      "created": "2019-10-29T21:17:59.979Z",
-      "updated": "2019-10-29T22:16:16.422Z"
-    },
-    {
-      "text": "newer edit",
-      "id": "a1078fa0-fa91-11e9-acb7-312f0d750b1b",
-      "created": "2019-10-29T21:18:19.034Z",
-      "updated": "2019-10-29T21:21:22.278Z"
-    },
-    {
-      "text": "Adding New",
-      "id": "0ba16b30-fa95-11e9-acb7-312f0d750b1b",
-      "created": "2019-10-29T21:42:46.371Z",
-      "updated": null
-    },
-    {
-      "text": "Test",
-      "id": "f8100a70-fa96-11e9-acb7-312f0d750b1b",
-      "created": "2019-10-29T21:56:32.535Z",
-      "updated": null
-    },
-    {
-      "text": "Ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttr",
-      "id": "1a907030-fa97-11e9-acb7-312f0d750b1b",
-      "created": "2019-10-29T21:57:30.419Z",
-      "updated": "2019-10-30T01:00:03.226Z"
-    },
-    {
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.rtt",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "id": "3d715990-faa4-11e9-91eb-8f5375aad451",
       "created": "2019-10-29T23:31:32.393Z",
       "updated": "2019-10-30T00:50:58.124Z"
     },
     {
-      "text": "New Note Again 3",
-      "id": "af3cc640-faae-11e9-91eb-8f5375aad451",
-      "created": "2019-10-30T00:46:18.276Z",
-      "updated": "2019-10-30T02:53:37.809Z"
+      "text": "Sample note: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "id": "fceb9dd0-fac2-11e9-b52d-87c8b05c0134",
+      "created": "2019-10-30T03:11:38.541Z",
+      "updated": null
     }
   ]
 }
